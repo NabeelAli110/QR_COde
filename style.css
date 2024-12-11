@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background: #555;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensure vertical centering */
+}
+.container{
+    width: 90%; /* Make width responsive */
+    max-width: 380px; /* Limit the maximum width */
+    padding: 25px 35px;
+    margin-top: 10%;
+    border: 2px solid #143a4c;
+    background: #73683B;
+    border-radius: 10px;
+    box-shadow: 0 0 9px #86979f;
+    position: relative; /* Changed for better responsiveness */
+}
+label{
+    font-size: 1.2rem; /* Adjusted font size for smaller screens */
+    font-weight: 500;
+    color: #2a424e;
+    display: block; /* Ensure label stays above input */
+    text-align: center; /* Centered for better visual hierarchy */
+    margin-bottom: 10px;
+}
+input{
+    width: 100%; /* Input adapts to container */
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    border: none;
+    box-sizing: border-box; /* Ensures padding doesn’t affect width */
+}
+#qrContainer{
+    width: 100%; /* Adapt width */
+    max-width: 200px; /* Maintain size limit */
+    padding: .9rem;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center; /* Center content */
+}
+#qrContainer .img-show{
+    max-height: 0px;
+    border: 1px solid #2a424e;
+}
+#qrContainer img{
+    width: 100%; /* Make image responsive */
+    max-width: 95%;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #2a424e;
+}
+.btn{
+    width: 100%; /* Button fills the container width */
+    height: 45px;
+    background: #143a4c;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 15px; /* Added margin for spacing */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer; /* Better user experience */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+    label {
+        font-size: 1rem; /* Adjust label font size */
+    }
+    .btn {
+        font-size: 0.9rem; /* Reduce button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px; /* Further reduce padding */
+    }
+    label {
+        font-size: 0.9rem; /* Adjust font size further */
+    }
+    .btn {
+        height: 40px; /* Adjust button height */
+    }
+}

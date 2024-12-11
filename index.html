@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>QRCode_Genrator</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="qrContainer"></div>
+        <label for="qrText">Enter You Text Or URL</label>
+        <input type="text" id="qrText" placeholder="Text Or URL" required>
+        <button type="button" class="btn" id="genBtn">Generate QR Code</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js">
+
+    </script>
+    <script>
+        let qrContainer = document.getElementById('qrContainer')
+        let qrText = document.getElementById('qrText')
+        let genBtn = document.getElementById('genBtn')
+
+        genrateQR = (qrText)=>{
+    qrContainer.innerHTML = ""
+    return new QRCode(qrContainer, {
+           text: qrText,
+           width: 200,
+           height: 200,
+           colorDark : "#000000",
+           colorLight : "#ffffff",
+           correctLevel : QRCode.CorrectLevel.H
+});
+}
+
+genBtn.addEventListener("click", (e)=>{
+    let = text =qrText.value
+    qrCode = genrateQR(text)
+})
+    
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>QRCode Generator</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Changed class to id -->
+        <label for="qrText">Enter Your Text or URL</label>
+        <input type="text" id="qrText" placeholder="Text or URL" required>
+        <div id="qrContainer"></div>
+        <button type="button" class="btn" id="genBtn">Generate QR Code</button>
+        <!-- <a href="" class="btn" id="downloadBtn" download="QRcode.jpg"> Download </a> -->
+    </div>
+
+    <!-- Correct script for QRCode.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
+
